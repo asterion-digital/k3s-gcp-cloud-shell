@@ -1,0 +1,25 @@
+* gcloud-console-awx-install
+
+** Introduction
+We needed to test the deployment of [[http://k3s.io][K3s]] and didn't want to pay/set up a new virtual machine for this.
+Instead, we chose to deploy K3s inside a free [[https://cloud.google.com/shell][Google Cloud Platform cloud shell]].
+
+Use the steps below to run K3s in Cloud Shell:
+
+#+name: Deploy K3s on Cloud Shell
+#+begin_src bash
+
+# Download the K3s binary from Github to CLoud SHell
+wget https://github.com/k3s-io/k3s/releases/download/v1.21.1%2Bk3s1/k3s
+
+# Make the binary executable
+chmod +x k3s
+
+# Run K3s in the background
+sudo ./k3s server --snapshotter native&
+#+end_src
+
+Click the button below to clone the Github repo directly into Cloud Shell 
+
+#+NAME:   fig:CloudShellButton
+[[https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/asterion-digital/gcloud-console-awx-install][./images/open-btn.png]]
