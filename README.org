@@ -1,4 +1,4 @@
-* gcloud-console-awx-install
+* Deploy K3s on Cloud Shell
 
 ** Introduction
 We needed to test the deployment of [[http://k3s.io][K3s]] and didn't want to pay/set up a new virtual machine for this.
