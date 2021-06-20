@@ -9,7 +9,7 @@ Use the steps below to run K3s in Cloud Shell:
 #+name: Deploy K3s on Cloud Shell
 #+begin_src bash
 
-# Download the K3s binary from Github to CLoud SHell
+# Download the K3s binary from Github to Cloud Shell
 wget https://github.com/k3s-io/k3s/releases/download/v1.21.1%2Bk3s1/k3s
 
 # Make the binary executable
@@ -23,3 +23,12 @@ Click the button below to clone the Github repo directly into Cloud Shell
 
 #+NAME:   fig:CloudShellButton
 [[https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/asterion-digital/gcloud-console-awx-install][./images/open-btn.png]]
+
+After running this script, validate the node is ready
+
+#+name: Validate K3s deployment
+#+begin_src bash
+
+# Check K3s cluster
+sudo ./k3s kubectl get nodes
+#+end_src
